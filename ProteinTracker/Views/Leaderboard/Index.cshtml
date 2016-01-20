@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Leaderboard";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Leaderboard</h2>
+<table>
+    <thead>
+    <tr>
+        <th>User</th>
+        <th>Score</th>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var leader in ViewBag.leaders)
+        {
+            <tr>
+                <td>@leader.Key</td>
+                <td>@leader.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>
+

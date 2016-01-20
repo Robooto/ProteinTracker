@@ -1,0 +1,17 @@
+﻿
+@{
+    ViewBag.Title = "Create User";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Create User</h2>
+<p>User Name: </p>
+@using (Html.BeginForm("Save", "Users", FormMethod.Post))
+{
+    <input type="text" id="userName" name="userName" value="@ViewBag.UserName"/>
+    <p>Goal :</p>
+    <input type="text" id="goal" name="goal" value="@ViewBag.Goal"/>
+    <input type="hidden" id="userId" name="userId" value="@ViewBag.UserId"/>
+    <input type="submit" text="Save"/>
+}
+

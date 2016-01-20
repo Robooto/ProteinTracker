@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "Select User";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+<h2>Select User</h2>
+<p>User: </p>
+@using (Html.BeginForm("Index", "Tracker", FormMethod.Post))
+{
+    @Html.DropDownList("UserId", null, string.Empty, new {@onChange = "form.submit();" })
+}
+
+@Html.ActionLink("Create New User", "NewUser", "Users");
